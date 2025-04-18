@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Technology_052</title>
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background-color: #4169E1;
+            color: #FFD700;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .icon-box {
+            background-color: white;
+            border: 2px solid #FFB6C1;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .icon-box:hover {
+            transform: scale(1.05);
+            background-color: #FFF0F5;
+        }
+        h2 {
+            color: #4169E1;
+        }
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+        .lab-box {
+            background-color: #fff;
+            border: 2px solid #FFD700;
+            padding: 30px;
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin: 40px auto;
+            text-align: center;
+            width: 100%;
+        }
+        .download-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background-color: #4169E1;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+        .download-btn:hover {
+            background-color: #27408b;
+        }
+        .reference-links {
+            margin-top: 50px;
+        }
+        .reference-links h2 {
+            border-bottom: 1px solid #FFD700;
+            padding-bottom: 10px;
+        }
+        .reference-links ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .reference-links li {
+            margin: 10px 0;
+        }
+        .reference-links a {
+            text-decoration: none;
+            color: #4169E1;
+        }
+        .reference-links a:hover {
+            color: #FF69B4;
+        }
+        .accordion {
+            background-color: #f9f9f9;
+            color: #333;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: left;
+            outline: none;
+            transition: background-color 0.3s;
+            margin-bottom: 10px;
+        }
+        .accordion:hover {
+            background-color: #e6f0ff;
+        }
+        .accordion:after {
+            content: '\002B';
+            float: right;
+            font-size: 20px;
+        }
+        .accordion.active:after {
+            content: "\2212";
+        }
+        .panel {
+            padding: 0 20px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+            border-left: 3px solid #4169E1;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Web Technology_052</h1>
+        <p>Your comprehensive resource for web technology studies</p>
+    </header>
+    <div id="home" class="lab-box">
+        <h2>🏠 Home</h2>
+        <p>Welcome to the Web Technology portal! Explore the syllabus, theory, lab exercises, and more using the tabs above.</p>
+   
+        <h2>🏠 Home - Purpose and Benefits of Web Technology</h2>
+        
+        <p><strong>🌐 Purpose of Web Technology:</strong></p>
+        <ul>
+            <li>To enable seamless communication and information sharing over the internet.</li>
+            <li>To support the development of interactive, dynamic, and user-friendly websites and applications.</li>
+            <li>To allow businesses, educators, and individuals to reach global audiences easily.</li>
+            <li>To integrate multimedia, services, and data across platforms and devices.</li>
+        </ul>
+    
+        <p><strong>💡 Benefits of Web Technology:</strong></p>
+        <ul>
+            <li>Improves accessibility to information anytime, anywhere.</li>
+            <li>Enhances user engagement through rich and responsive interfaces.</li>
+            <li>Facilitates real-time collaboration and data sharing.</li>
+            <li>Reduces operational costs for businesses via online platforms.</li>
+            <li>Supports automation and integration with other emerging technologies (AI, IoT, Cloud, etc.).</li>
+        </ul>
+    </div>
+    
+    
+
+    <div class="icon-grid">
+        <div class="icon-box" onclick="document.getElementById('syllabus').scrollIntoView({ behavior: 'smooth' });">
+            <h2>Syllabus</h2>
+            <p>📚 Textbooks and course outline</p>
+        </div>
+        <div class="icon-box" onclick="document.getElementById('theory').scrollIntoView({ behavior: 'smooth' });">
+            <h2>Theory Notes</h2>
+            <p>📝 Detailed Chapters</p>
+            
+<div class="introduction">
+    <p>Welcome to the Web Technology course! Here you will learn all about the basics and advanced topics of web development, including HTML, CSS, JavaScript, databases, and more!</p>
+    <p><strong>Theory Link:</strong> <a href="https://archive.org/details/webtechnologiesc0000jack?utm_source=chatgpt.com" target="_blank">Click here for the theory notes</a></p>
+</div>
+        </div>
+        <div class="icon-box" onclick="document.getElementById('lab').scrollIntoView({ behavior: 'smooth' });">
+            <h2>Lab Manual</h2>
+            <p>🔬 Practical exercises and download link</p>
+        </div>
+        <div class="icon-box" onclick="document.getElementById('references').scrollIntoView({ behavior: 'smooth' });">
+            <h2>Reference Links</h2>
+            <p>🔗 20+ valuable resources</p>
+        </div>
+    </div>
+
+    <!-- Syllabus Section -->
+    <div id="syllabus" class="lab-box">
+        <h2>📘 Web Technology – Syllabus</h2>
+        <p>Click each unit below to expand and view its contents:</p>
+
+        <button class="accordion">Course Objectives</button>
+        <div class="panel">
+            <ul>
+                <li>To introduce the fundamental concepts of web development.</li>
+                <li>To provide knowledge about front-end and back-end technologies.</li>
+                <li>To enable students to build interactive and responsive web applications.</li>
+                <li>To cover security, APIs, and modern web development practices.</li>
+            </ul>
+        </div>
+
+        <button class="accordion">Unit 1: Introduction to Web Technologies</button>
+        <div class="panel"><ul>
+            <li>Evolution of the Web</li><li>Internet vs. Web</li>
+            <li>Web Architecture: Client-Server Model</li>
+            <li>Web Browsers and Web Servers</li>
+            <li>URL, URI, and HTTP</li></ul>
+            <button class="accordion">Introduction to Web Technology</button>
+<div class="panel">
+  <ul>
+      <li><strong>Introduction to Web Technology:</strong> Basics of web development.</li>
+      <li><strong>History of Web:</strong> Evolution from Web 1.0 to Web 3.0.</li>
+      <li><strong>Web Technologies Overview:</strong> HTML, CSS, JavaScript, and more.</li>
+      <li><strong>Client-Server Model:</strong> How data is transmitted between client and server.</li>
+      <li><strong>Web Servers and Browsers:</strong> Functionality of web browsers and servers.</li>
+  </ul>
+  <p><strong>🔍 Example:</strong></p>
+  <pre><code>console.log("Welcome to Web Technology!");</code></pre>
+</div>
+
+        </div>
+        
+
+        
+
+        <button class="accordion">Unit 2: HTML – HyperText Markup Language</button>
+        <div class="panel"><ul>
+            <li>Structure of an HTML Document</li><li>HTML Elements and Attributes</li>
+            <li>Headings, Paragraphs, Links, Lists</li><li>Tables and Forms</li>
+            <li>Semantic HTML5 Elements</li></ul>
+            <button class="accordion">HTML – HyperText Markup Language</button>
+<div class="panel">
+  <ul>
+      <li><strong>Structure of an HTML Document:</strong> The skeleton of a webpage.</li>
+      <li><strong>HTML Elements and Attributes:</strong> Elements like <code>&lt;p&gt;</code> and attributes like <code>href</code>.</li>
+      <li><strong>Headings, Paragraphs, Links, Lists:</strong> Organize and link content.</li>
+      <li><strong>Tables and Forms:</strong> Display data and collect user input.</li>
+      <li><strong>Semantic HTML5 Elements:</strong> Use of <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code> for meaningful layout.</li>
+  </ul>
+  <p><strong>🔍 Example:</strong></p>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;HTML Example&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Welcome to Web Technology&lt;/h1&gt;
+  &lt;p&gt;This is a paragraph with a &lt;a href="https://example.com"&gt;link&lt;/a&gt;.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+        </div>
+
+        <button class="accordion">Unit 3: CSS – Cascading Style Sheets</button>
+        <div class="panel"><ul>
+            <li>Types of CSS: Inline, Internal, and External</li><li>Selectors, Properties, and Values</li>
+            <li>Box Model and Positioning</li><li>Flexbox and Grid Layout</li>
+            <li>Media Queries and Responsive Design</li></ul>
+            <button class="accordion">CSS – Cascading Style Sheets</button>
+<div class="panel">
+  <ul>
+      <li><strong>Introduction to CSS:</strong> Styling web pages with CSS.</li>
+      <li><strong>CSS Selectors and Properties:</strong> Targeting elements with selectors.</li>
+      <li><strong>Box Model:</strong> Understanding margins, padding, borders, and content.</li>
+      <li><strong>CSS Layout Techniques:</strong> Flexbox, Grid, and positioning.</li>
+      <li><strong>Responsive Design:</strong> Making websites mobile-friendly with media queries.</li>
+  </ul>
+  <p><strong>🔍 Example:</strong></p>
+  <pre><code>body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  color: #666;
+  font-size: 16px;
+}</code></pre>
+</div>
+        </div>
+
+
+        <button class="accordion">Unit 4: JavaScript – Client-side Scripting</button>
+        <div class="panel"><ul>
+            <li>Syntax, Variables, and Data Types</li><li>Operators and Control Structures</li>
+            <li>Functions and Events</li><li>DOM Manipulation</li><li>Introduction to ES6 Features</li></ul>
+            <button class="accordion">JavaScript Basics</button>
+<div class="panel">
+  <ul>
+      <li><strong>Introduction to JavaScript:</strong> Basics of scripting on the web.</li>
+      <li><strong>Variables and Data Types:</strong> Declaring variables and understanding data types.</li>
+      <li><strong>Functions and Loops:</strong> Writing functions and looping through data.</li>
+      <li><strong>DOM Manipulation:</strong> Interacting with HTML elements using JavaScript.</li>
+      <li><strong>Events in JavaScript:</strong> Handling user inputs and interactions.</li>
+  </ul>
+  <p><strong>🔍 Example:</strong></p>
+  <pre><code>function greetUser() {
+  alert("Hello, welcome to the website!");
+}</code></pre>
+</div>
+        </div>
+
+        <button class="accordion">Unit 5: Web Graphics and Multimedia</button>
+        <div class="panel"><ul>
+            <li>Image Formats and Embedding</li><li>HTML5 Canvas and SVG</li>
+            <li>Audio and Video Embedding</li><li>CSS Animations and Transitions</li></ul>
+            <button class="accordion">Advanced JavaScript and DOM</button>
+<div class="panel">
+  <ul>
+      <li><strong>Advanced Functions:</strong> Arrow functions, closures, and callbacks.</li>
+      <li><strong>Working with Arrays and Objects:</strong> Methods and manipulation techniques.</li>
+      <li><strong>Event Handling and Delegation:</strong> Managing events more efficiently.</li>
+      <li><strong>AJAX and Fetch API:</strong> Asynchronous web requests for dynamic content.</li>
+      <li><strong>JavaScript Frameworks Overview:</strong> Introduction to frameworks like React and Vue.</li>
+  </ul>
+  <p><strong>🔍 Example:</strong></p>
+  <pre><code>fetch('https://api.example.com/data')
+  .then(response => response.json())
+  .then(data => console.log(data));</code></pre>
+</div>
+        </div>
+
+        <button class="accordion">Unit 6: Client-Side Frameworks and Libraries</button>
+        <div class="panel"><ul>
+            <li>Introduction to jQuery</li><li>Angular Basics</li>
+            <li>React Components and State</li><li>Vue.js Overview</li>
+            <li>Comparison of Front-End Frameworks</li></ul>
+            <button class="accordion">Web Server Basics</button>
+<div class="panel">
+  <ul>
+      <li><strong>Introduction to Web Servers:</strong> How servers host websites and serve content.</li>
+      <li><strong>Setting Up a Local Web Server:</strong> Using tools like XAMPP and WAMP.</li>
+      <li><strong>HTTP Protocol:</strong> Understanding HTTP requests and responses.</li>
+      <li><strong>Server-Side Languages:</strong> Introduction to PHP, Node.js, and Python.</li>
+      <li><strong>Databases:</strong> Basics of MySQL and integrating with web servers.</li>
+  </ul>
+  <p><strong>🔍 Example:</strong></p>
+  <pre><code>const http = require('http');
+
+http.createServer((req, res) => {
+  res.write('Hello, World!');
+  res.end();
+}).listen(8080);</code></pre>
+</div>
+        </div>
+
+        <button class="accordion">Unit 7: Server-Side Scripting and Databases</button>
+        <div class="panel"><ul>
+            <li>Introduction to PHP / Node.js / Python</li>
+            <li>Handling Forms and User Input</li>
+            <li>Connecting to a Database (MySQL/MongoDB)</li>
+            <li>Sessions and Cookies</li><li>CRUD Operations</li></ul>
+            <button class="accordion">Database and SQL</button>
+<div class="panel">
+  <ul>
+      <li><strong>Introduction to Databases:</strong> What are databases and why are they important?</li>
+      <li><strong>SQL Basics:</strong> SQL syntax, SELECT, INSERT, UPDATE, DELETE queries.</li>
+      <li><strong>Relational Databases:</strong> Understanding tables, relationships, and keys.</li>
+      <li><strong>Database Normalization:</strong> How to structure databases efficiently.</li>
+      <li><strong>Connecting Databases to Web Servers:</strong> Using PHP or Node.js to connect to a database.</li>
+  </ul>
+  <p><strong>🔍 Example:</strong></p>
+  <pre><code>SELECT * FROM users WHERE age > 18;</code></pre>
+</div>
+        </div>
+
+        <button class="accordion">Unit 8: Web Protocols and Security</button>
+        <div class="panel"><ul>
+            <li>HTTP Methods: GET, POST, PUT, DELETE</li>
+            <li>HTTPS and SSL/TLS</li><li>Authentication and Authorization</li>
+            <li>Cross-Site Scripting (XSS)</li><li>SQL Injection and Prevention</li></ul>
+            <button class="accordion">PHP Basics</button>
+<div class="panel">
+  <ul>
+      <li><strong>Introduction to PHP:</strong> Server-side scripting basics with PHP.</li>
+      <li><strong>PHP Syntax and Variables:</strong> Writing PHP code with variables and data types.</li>
+      <li><strong>Working with Forms in PHP:</strong> Collecting and processing form data.</li>
+      <li><strong>PHP and Databases:</strong> Connecting PHP with MySQL databases.</li>
+      <li><strong>Introduction to MVC Architecture:</strong> Model-View-Controller pattern in PHP.</li>
+  </ul>
+  <p><strong>🔍 Example:</strong></p>
+  <pre><code>&lt;?php
+echo "Hello, World!";
+?&gt;</code></pre>
+</div>
+        </div>
+
+        <button class="accordion">Unit 9: Web Services and APIs</button>
+        <div class="panel"><ul>
+            <li>Introduction to RESTful APIs</li><li>JSON and XML</li>
+            <li>Consuming APIs with AJAX and Fetch</li><li>Introduction to GraphQL</li>
+            <li>API Testing Tools (Postman)</li></ul>
+            <button class="accordion">Web Security</button>
+<div class="panel">
+  <ul>
+      <li><strong>Introduction to Web Security:</strong> Understanding common web vulnerabilities.</li>
+      <li><strong>SQL Injection:</strong> How attackers exploit SQL queries and how to prevent it.</li>
+      <li><strong>Cross-Site Scripting (XSS):</strong> Preventing script injection attacks.</li>
+      <li><strong>Cross-Site Request Forgery (CSRF):</strong> Understanding and preventing CSRF attacks.</li>
+      <li><strong>HTTPS and SSL/TLS:</strong> Securing your website with SSL certificates.</li>
+  </ul>
+  <p><strong>🔍 Example:</strong></p>
+  <pre><code>const https = require('https');
+
+https.createServer((req, res) => {
+  res.write("Secure connection");
+  res.end();
+}).listen(443);</code></pre>
+</div>
+        </div>
+
+        <button class="accordion">Unit 10: Modern Web Development Practices</button>
+        <div class="panel"><ul>
+            <li>Version Control with Git & GitHub</li><li>Webpack, Babel, and NPM</li>
+            <li>Progressive Web Apps (PWA)</li><li>DevOps and CI/CD Basics</li>
+            <li>Introduction to Web Hosting & Deployment</li></ul>
+            <button class="accordion">Unit 10: Web Development Frameworks</button>
+<div class="panel">
+  <ul>
+      <li><strong>Introduction to Frameworks:</strong> The role of web development frameworks.</li>
+      <li><strong>React.js:</strong> Basics of React for building modern web apps.</li>
+      <li><strong>Vue.js:</strong> A lightweight alternative to React for UI development.</li>
+      <li><strong>Node.js:</strong> Server-side JavaScript for building scalable applications.</li>
+      <li><strong>Using Frameworks with Databases:</strong> Integrating web frameworks with databases.</li>
+  </ul>
+  <p><strong>🔍 Example:</strong></p>
+  <pre><code>const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hello, World!');
+});
+
+app.listen(3000, () => console.log('Server running on port 3000'));</code></pre>
+</div>
+        </div>
+
+        <script>
+            const acc = document.getElementsByClassName("accordion");
+            for (let i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    const panel = this.nextElementSibling;
+                    panel.style.display = panel.style.display === "block" ? "none" : "block";
+                });
+            }
+        </script>
+    </div>
+    
+
+  
+
+    
+
+    <!-- Lab Manual Section -->
+    <!-- Lab Manual Section -->
+<div id="lab" class="lab-box">
+  <h2>🔬 Web Technology Lab Manual</h2>
+  <p>Click below to view or download the official Lab Manual:</p>
+  <a class="download-btn" href="lab.html.pdf" target="_blank">📄 View Lab Manual (PDF)</a>
+
+  <p style="margin-top: 20px;">Or view selected lab experiments below:</p>
+
+  <div style="text-align: left; padding-top: 20px;">
+      <h3>🔹 Ex.No: 1a - HTML Text Formatting</h3>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;center&gt;
+&lt;marquee&gt;&lt;h1&gt;&lt;font color="darkViolet"&gt;Web Technology&lt;/font&gt;&lt;/h1&gt;&lt;/marquee&gt;
+&lt;table border="1"&gt;
+&lt;caption align="top"&gt;&lt;font size="+2" color="red"&gt;Text Formatting Tags&lt;/font&gt;&lt;/caption&gt;
+&lt;tr&gt;&lt;th&gt;HTML Tag&lt;/th&gt;&lt;th&gt;Output&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;normal text&lt;/td&gt;&lt;td&gt;hello world&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&amp;lt;B&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Bold&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&amp;lt;I&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;i&gt;Italic&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;!-- More rows... --&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+      </code></pre>
+
+      <h3>🔹 Ex.No: 1b - HTML List Tags</h3>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;h1&gt;HTML List: Ordered, Unordered &amp; Definition List&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Aarthi
+  &lt;ul&gt;
+    &lt;li&gt;I Semester
+      &lt;ol&gt;
+        &lt;li&gt;Engineering Mathematics I: 80&lt;/li&gt;
+        &lt;li&gt;C Programming: 90&lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+      </code></pre>
+
+      <h3>🔹 Ex.No: 1c - HTML Time Table</h3>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Time Table&lt;/title&gt;&lt;/head&gt;
+&lt;body bgcolor="lightgrey"&gt;
+&lt;h1&gt;CLASS TIME TABLE&lt;/h1&gt;
+&lt;table border="2"&gt;
+&lt;tr&gt;
+  &lt;td&gt;Days|Time&lt;/td&gt;&lt;td&gt;8:30-9:30&lt;/td&gt;&lt;td&gt;9:30-10:30&lt;/td&gt;...
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td&gt;MONDAY&lt;/td&gt;&lt;td&gt;---&lt;/td&gt;&lt;td&gt;English&lt;/td&gt;&lt;td&gt;Tamil&lt;/td&gt;
+&lt;/tr&gt;
+&lt;!-- More rows... --&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+      </code></pre>
+  </div>
+</div>
+
+<!-- Quiz Section -->
+<div id="quiz" class="lab-box">
+  <h2>🧠 Web Technology Quiz</h2>
+  <p>Test your understanding with these quick MCQs!</p>
+
+  <!-- Question 1 -->
+  <div class="quiz-question">
+      <p><strong>1. What does HTML stand for?</strong></p>
+      <button onclick="checkAnswer(this, 'b')">a) Hyperlinks and Text Markup Language</button><br>
+      <button onclick="checkAnswer(this, 'b')">b) HyperText Markup Language</button><br>
+      <button onclick="checkAnswer(this, 'b')">c) Home Tool Markup Language</button><br>
+      <p class="feedback"></p>
+  </div>
+
+  <!-- Question 2 -->
+  <div class="quiz-question">
+      <p><strong>2. Which tag is used to create an ordered list in HTML?</strong></p>
+      <button onclick="checkAnswer(this, 'a')">a) &lt;ol&gt;</button><br>
+      <button onclick="checkAnswer(this, 'a')">b) &lt;ul&gt;</button><br>
+      <button onclick="checkAnswer(this, 'a')">c) &lt;li&gt;</button><br>
+      <p class="feedback"></p>
+  </div>
+
+  <!-- Question 3 -->
+  <div class="quiz-question">
+      <p><strong>3. What is the purpose of CSS?</strong></p>
+      <button onclick="checkAnswer(this, 'c')">a) To define HTML structure</button><br>
+      <button onclick="checkAnswer(this, 'c')">b) To make web pages dynamic</button><br>
+      <button onclick="checkAnswer(this, 'c')">c) To style the appearance of web pages</button><br>
+      <p class="feedback"></p>
+  </div>
+</div>
+
+<!-- Quiz Styles and Script -->
+<style>
+  .quiz-question {
+      text-align: left;
+      margin-top: 30px;
+      background: #f9f9ff;
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 4px solid #4169E1;
+  }
+  .quiz-question button {
+      display: block;
+      margin: 8px 0;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      background-color: #f0f0f0;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: left;
+  }
+  .quiz-question button:hover {
+      background-color: #e6f0ff;
+  }
+  .feedback {
+      font-weight: bold;
+      margin-top: 10px;
+  }
+</style>
+
+<script>
+  function checkAnswer(button, correct) {
+      const allButtons = button.parentElement.querySelectorAll("button");
+      allButtons.forEach(btn => btn.disabled = true);
+
+      const answer = button.innerText.trim();
+      const isCorrect = button.innerText.toLowerCase().includes(correct.toLowerCase());
+      const feedback = button.parentElement.querySelector(".feedback");
+
+      if (isCorrect) {
+          feedback.innerText = "✅ Correct!";
+          feedback.style.color = "green";
+          button.style.backgroundColor = "#d4edda";
+      } else {
+          feedback.innerText = "❌ Incorrect. Try again!";
+          feedback.style.color = "red";
+          button.style.backgroundColor = "#f8d7da";
+      }
+  }
+</script>
+
+
+    <!-- Reference Links Section -->
+    <div id="references" class="reference-links">
+        <h2>📚 Reference Links (20+ Resources)</h2>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN HTML Documentation</a></li>
+            <li><a href="https://www.w3schools.com/css/" target="_blank">W3Schools CSS Tutorial</a></li>
+            <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a></li>
+            <li><a href="https://html5doctor.com/" target="_blank">HTML5 Doctor</a></li>
+            <li><a href="https://javascript.info/" target="_blank">Modern JavaScript Tutorial</a></li>
+            <li><a href="https://eloquentjavascript.net/" target="_blank">Eloquent JavaScript</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">MDN JavaScript Guide</a></li>
+            <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a></li>
+            <li><a href="https://web.dev/" target="_blank">web.dev by Google</a></li>
+            <li><a href="https://www.theodinproject.com/" target="_blank">The Odin Project</a></li>
+            <li><a href="https://codepen.io/" target="_blank">CodePen</a></li>
+            <li><a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
+            <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>© 2024 Web Technology/048 - For Educational Purposes</p>
+    </footer>
+
+</body>
+</html>
+
+
+
